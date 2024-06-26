@@ -1,18 +1,58 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-   <title>Textured Triangle WASM/WebGL Example</title>
-   <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KGFX Demos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #canvas-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        footer {
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
 </head>
 
 <body>
-
-    <!-- You wasm program needs a canvas object on the DOM side -->
-    <canvas id="my_canvas" oncontextmenu="event.preventDefault()"></canvas>
-
-    <!-- Inform the DOM to execute your program -->
-    <script src="index.js"></script>  
-
+    <h1>KGFX Demos</h1>
+    <div id="canvas-container">
+        <canvas id="my_canvas" oncontextmenu="event.preventDefault()"></canvas>
+    </div>
+    <footer>
+        Powered by WebGL and WebAssembly
+    </footer>
+    <script src="textureDemo.js"></script>
 </body>
 
 </html>
